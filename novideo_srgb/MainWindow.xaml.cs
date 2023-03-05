@@ -34,7 +34,6 @@ namespace novideo_srgb
 
             if (args.Contains("-reapply"))
             {
-                ReapplyMonitorSettings();
                 Close();
             }
 
