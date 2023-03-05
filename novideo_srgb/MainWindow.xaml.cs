@@ -32,6 +32,12 @@ namespace novideo_srgb
             var args = Environment.GetCommandLineArgs().ToList();
             args.RemoveAt(0);
 
+            if (args.Contains("-reapply"))
+            {
+                ReapplyMonitorSettings();
+                Close();
+            }
+
             if (args.Contains("-minimize"))
             {
                 WindowState = WindowState.Minimized;
